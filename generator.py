@@ -11,10 +11,10 @@ import concurrent.futures
 # ----------------------
 
 CONFIG = {
-    'width': 2480,
-    'height': 1320,
-    'target_width': 1920,
-    'target_height': 1080,
+    'width': 1920,
+    'height': 1080,
+    'target_width': 960,
+    'target_height': 540,
 
     'shape_count_min': 3000,
     'shape_count_max': 5000,
