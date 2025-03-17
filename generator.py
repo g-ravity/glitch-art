@@ -513,8 +513,10 @@ def create_glitch_frames(cfg, image):
                 data[y:y+h, x:x+w] = np.roll(block, shift, axis=1)
 
         if random.random() < intensity * 0.8:
-            noise_mask = np.random.random(data.shape) > 0.99
-            data[noise_mask] = np.random.randint(0, 255, size=(3,))
+            noise_mask = np.random.random(data.shape[:2]) > 0.99
+            noise_pixels = np.random.randint(
+                0, 255, size=(np.sum(noise_mask), 3))
+            data[noise_mask] = noise_pixels
 
         frame = Image.fromarray(data)
         frame = apply_hue_shift(cfg, frame, i)
