@@ -5,7 +5,7 @@ A Python-based generative art tool that creates glitch-style artwork with variou
 ## Features
 
 - Generates unique abstract art with multiple geometric shapes
-- Creates animated GIF outputs with wave effects
+- Creates animated GIF outputs with multiple effects like wave and pulse and more
 - Supports multiple color palettes
 - Parallel processing for faster generation
 
